@@ -1,0 +1,101 @@
+.signing {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    width: 50%;
+    animation-name: visiableSign;
+    animation-duration: 0.5s;
+    transform: scale(1);
+}
+
+@keyframes visiableSign {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.signing .container {
+    background-color: var(--secondary);
+    width: 90%;
+    padding: 10px;
+}
+
+.signing .container .inp {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.signing .container .inp div {
+    width: 48%;
+}
+
+.signing .container h2 {
+    margin: 10px 0;
+    text-transform: capitalize;
+    color: var(--main);
+}
+
+.signing .container .inp label {
+    display: block;
+    margin: 10px 0;
+    color: var(--main);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.signing .container .inp input {
+    padding: 10px;
+    width: 98%;
+    border: none;
+    border-bottom: 1px solid var(--main);
+}
+
+.signing .container .inp input::placeholder {
+    color: var(--main);
+}
+
+.action {
+    margin: 10px;
+}
+
+.action button {
+    padding: 5px 25px;
+    margin: 0 5px;
+    color: var(--second);
+    background-color: var(--main);
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.action .signBtn:hover {
+    background-color: var(--main2);
+}
+
+.action .loginBtn {
+    background-color: transparent;
+    color: var(--main);
+    border: 1px solid var(--main);
+}
+
+.signing .checkIcon {
+    margin: 0 5px;
+}
+
+.signing .fa-x {
+    color: var(--error);
+}
+
+.signing .rules p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.signing .fa-check {
+    color: var(--success);
+}

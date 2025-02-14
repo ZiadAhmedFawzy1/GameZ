@@ -1,0 +1,177 @@
+.mainPage {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.mainPage .welocme,
+.mainPage .login {
+    width: 50%;
+    height: 100vh;
+}
+
+
+.mainPage .login {
+    position: fixed;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: welcomePostion;
+    animation-duration: 3s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mainPage .login .container {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    color: var(--main);
+}
+
+.mainPage .login .container h2 {
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.mainPage .login .container form {
+    width: 90%;
+}
+
+.mainPage .login .container form input {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid var(--main);
+}
+
+.mainPage .login .container form button {
+    padding: 5px 25px;
+    background-color: var(--main);
+    color: var(--second);
+    margin: 10px 5px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition-duration: 0.2s;
+}
+
+.mainPage .login .container form .sign {
+    padding: 5px 25px;
+    background-color: transparent;
+    border: 1px solid var(--main);
+    cursor: pointer;
+    color: var(--main);
+    border-radius: 20px;
+    transition-duration: 0.2s;
+}
+
+.mainPage .login .container form .forgot-pass {
+    font-size: 12px;
+    color: var(--main);
+    display: block;
+}
+
+.mainPage .login .container form .forgot-pass:hover {
+    text-decoration: underline;
+}
+
+.mainPage .login .container form .sign:hover {
+    border-radius: 5px;
+}
+
+.mainPage .login .container form button:hover {
+    background-color: transparent;
+    border: 1px solid var(--main);
+    cursor: pointer;
+    color: var(--main);
+}
+
+/* welocme */
+
+.mainPage .welocme {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: var(--second);
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    animation-name: welcomeWidth;
+    animation-duration: 2s;
+    z-index: 2;
+    box-shadow: 0px 2px 8px 7px #00000029;
+}
+
+.mainPage .welocme h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.mainPage .welocme h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.mainPage .welocme .container {
+    width: fit-content;
+    width: 300px;
+}
+
+.mainPage .welocme p {
+    font-size: 9px;
+}
+/* policy-and-rules */
+.mainPage .welocme .policy-and-rules {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainPage .welocme .policy-and-rules button {
+   all: unset;
+   font-size: 10px;
+   cursor: pointer;
+}
+
+.mainPage .welocme .policy-and-rules .powerdLogo {
+    font-size: 10px;
+}
+
+.mainPage .welocme .policy-and-rules .powerdLogo i {
+    margin: 0 5px;
+}
+
+.mainPage .welocme .policy-and-rules .powerdLogo span {
+    margin: 0 10px;
+}
+
+@keyframes welcomePostion {
+    0% {
+        position: fixed;
+        opacity: 0;
+        right: -550px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes welcomeWidth {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 50%;
+    }
+}

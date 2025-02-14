@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --error: #ff3535;
+  --success: #029202;
+  --main: #3f5efb;
+  --main2:#1e2e7d;
+  --second: #fff;
+  --ReactInputVerificationCode-itemWidth: 2rem !important;
+  --ReactInputVerificationCode-itemHeight: 2rem !important;
+
+}
+
+.error {
+  color: var(--error);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+button {
+  all: unset;
+}
+
+input:focus{
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  cursor: default;
+}
