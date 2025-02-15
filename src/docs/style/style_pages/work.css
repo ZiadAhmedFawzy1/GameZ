@@ -1,0 +1,149 @@
+.work header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--main);
+    color: var(--second);
+    position: relative;
+}
+
+.work header .info {
+    display: flex;
+}
+
+.work header .info button {
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.work header .info button::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -10px;
+    border: 3px solid transparent;
+}
+
+.work header .info .open::before {
+    border-top: 3px solid var(--second);
+    top: 45%;
+}
+.work header .info .close::before {
+    border-bottom: 3px solid var(--second);
+    top: 35%;
+}
+
+.work header .porfileImg {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 10px;
+}
+
+.options {
+    position: absolute;
+    list-style: none;
+    right: 0;
+    top: 40px;
+    width: 250px;
+    font-size: 13px;
+    background-color: var(--main2);
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    animation-name: visible;
+    animation-duration: 0.5s;
+    min-height: fit-content;
+    overflow: hidden;
+}
+
+
+@keyframes visible {
+    0% {
+        transform: scale(0);
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        height: 265px;
+        opacity: 1;
+    }
+}
+
+.options li {
+    margin: 10px 0;
+}
+
+.options a,.options button {
+    display: inline-block;
+    color: var(--second);
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.options a:hover,
+.options button:hover {
+    color: var(--main2);
+    background-color: var(--second);
+}
+
+.options i {
+    margin: 0 10px;
+}
+
+.header-option {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header-option .username {
+    font-size: 12px;
+    padding: 2px;
+    background-color: var(--main);
+    color: var(--second);
+    border-radius: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.header-option .username:hover {
+    background-color: var(--second);
+    color: var(--main2);
+}
+
+.header-option .logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main);
+    margin: auto;
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.header-option .activeationMessage {
+    font-size: 11px;
+    border-bottom: 1px solid var(--second);
+}
+
+.header-option .activeationMessage p {
+    margin: 10px 0;
+    color: var(--error);
+}
+
+.header-option .activeationMessage i {
+    color: var(--error);
+}

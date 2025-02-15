@@ -1,8 +1,9 @@
-import '../style/stlye_components/main.css';
-import Signup from "./signup";
-import Login from "./login";
+import '../style/style_pages/main.css';
+import Signup from "../components/signup";
+import Login from "../components/login";
 import { useContext } from 'react';
 import { Auth } from '../context/context';
+import Logo from '../components/logo';
 
 export default function Main() {
     const {sign} = useContext(Auth)
@@ -11,7 +12,7 @@ export default function Main() {
             <div className="welocme">
                 <div className="container">
                     <h2>welcome to</h2>
-                    <h1>grow here <i className="fa-solid fa-seedling"></i></h1>
+                    <Logo/>
                     <p>Start to make money with your experience here, go fast as a rocket and 
                         start now to your dream come true
                     </p>

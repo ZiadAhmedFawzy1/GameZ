@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import Main from './docs/components/main';
+import Main from './docs/pages/main';
 import './docs/style/App.css';
 import { Route, Routes } from 'react-router-dom';
-import Work from './docs/components/work';
+import Work from './docs/pages/work';
 import { Auth } from './docs/context/context';
 
 export default function App() {
