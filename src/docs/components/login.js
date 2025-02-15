@@ -6,7 +6,7 @@ export default function Login() {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [messageError, setMessageError] = useState("")
-    const {setSign} = useContext(Auth)
+    const {setSign, API} = useContext(Auth)
     const HandleLogin = (e) => {
         e.preventDefault();
         if(!email || !password) {
@@ -16,6 +16,22 @@ export default function Login() {
         {
             if(!email.includes("@gmail.com")) {
                 setMessageError("your email must include @gmail.com")
+            }
+            else {
+                fetch(`${API}/Login`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type":"application/json",
+                    },
+                    credentials: "include",
+                    body: JSON.stringify({mail:email,pass: password})
+                })
+                .then((res) => {
+                    if(res.status === 200) {
+
+                    }
+                })
+                setMessageError("")
             }
         }
     }
