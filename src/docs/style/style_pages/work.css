@@ -146,4 +146,36 @@
 
 .header-option .activeationMessage i {
     color: var(--error);
+} 
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+.filter select {
+    padding: 10px;
+    border: 1px solid #0000001e;
+    border-radius: 10px;
+    width: 29%;
+    margin: 10PX;
+}
+
+.filter .collect-skills {
+    width: 30%;
+    border: 1px solid #0000001e;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.filter .collect-skills .skill {
+    border: 1px solid #0000001e;
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
 }

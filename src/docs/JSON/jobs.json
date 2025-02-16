@@ -1,0 +1,172 @@
+{
+"categories": [
+    {
+    "id": 1,
+    "name": "Web Development",
+    "jobs": [
+        {
+        "id": 101,
+        "title": "Frontend Developer",
+        "description": "Develop and maintain UI components using React and Tailwind.",
+        "skills": ["React", "Tailwind", "JavaScript", "HTML", "CSS"]
+        },
+        {
+        "id": 102,
+        "title": "Backend Developer",
+        "description": "Build and optimize APIs using Node.js and Express.",
+        "skills": ["Node.js", "Express", "MongoDB", "REST API"]
+        },
+        {
+        "id": 103,
+        "title": "Full Stack Developer",
+        "description": "Develop and manage both frontend and backend for web applications.",
+        "skills": ["React", "Node.js", "Express", "MongoDB", "REST API"]
+        }
+    ]
+    },
+    {
+    "id": 2,
+    "name": "Graphic Design",
+    "jobs": [
+        {
+        "id": 201,
+        "title": "Logo Designer",
+        "description": "Create modern and professional logos for brands.",
+        "skills": ["Adobe Illustrator", "Photoshop", "Branding"]
+        },
+        {
+        "id": 202,
+        "title": "UI/UX Designer",
+        "description": "Design user-friendly interfaces for web and mobile applications.",
+        "skills": ["Figma", "Sketch", "Adobe XD", "Wireframing"]
+        },
+        {
+        "id": 203,
+        "title": "Illustrator",
+        "description": "Create high-quality illustrations for various projects.",
+        "skills": ["Adobe Illustrator", "Procreate", "Sketching", "Digital Art"]
+        }
+    ]
+    },
+    {
+    "id": 3,
+    "name": "Writing & Translation",
+    "jobs": [
+        {
+        "id": 301,
+        "title": "Content Writer",
+        "description": "Write high-quality blog posts and articles on various topics.",
+        "skills": ["SEO", "Copywriting", "Research", "Editing"]
+        },
+        {
+        "id": 302,
+        "title": "Translator",
+        "description": "Translate documents accurately between different languages.",
+        "skills": ["Multilingual", "Proofreading", "Localization"]
+        },
+        {
+        "id": 303,
+        "title": "Technical Writer",
+        "description": "Write detailed documentation and user guides for software products.",
+        "skills": ["Technical Writing", "API Documentation", "Research"]
+        }
+    ]
+    },
+    {
+    "id": 4,
+    "name": "Marketing & SEO",
+    "jobs": [
+        {
+        "id": 401,
+        "title": "SEO Specialist",
+        "description": "Optimize websites for search engine ranking and performance.",
+        "skills": ["SEO", "Google Analytics", "Keyword Research", "Link Building"]
+        },
+        {
+        "id": 402,
+        "title": "Social Media Manager",
+        "description": "Manage and grow social media accounts for businesses.",
+        "skills": ["Social Media", "Content Creation", "Advertising", "Engagement"]
+        },
+        {
+        "id": 403,
+        "title": "Email Marketing Expert",
+        "description": "Create and manage email campaigns for customer engagement.",
+        "skills": ["Email Marketing", "Automation", "Copywriting", "Analytics"]
+        }
+    ]
+    },
+    {
+    "id": 5,
+    "name": "Video & Animation",
+    "jobs": [
+        {
+        "id": 501,
+        "title": "Video Editor",
+        "description": "Edit and enhance videos for various platforms.",
+        "skills": ["Adobe Premiere Pro", "Final Cut Pro", "After Effects"]
+        },
+        {
+        "id": 502,
+        "title": "Animator",
+        "description": "Create engaging animations for ads, films, and explainer videos.",
+        "skills": ["2D Animation", "3D Animation", "Adobe After Effects", "Blender"]
+        },
+        {
+        "id": 503,
+        "title": "Motion Graphics Designer",
+        "description": "Design and animate motion graphics for videos and advertisements.",
+        "skills": ["After Effects", "Cinema 4D", "Adobe Photoshop", "Illustrator"]
+        }
+    ]
+    },
+    {
+    "id": 6,
+    "name": "Finance & Accounting",
+    "jobs": [
+        {
+        "id": 601,
+        "title": "Accountant",
+        "description": "Manage and maintain financial records for businesses.",
+        "skills": ["Accounting", "Bookkeeping", "QuickBooks", "Excel"]
+        },
+        {
+        "id": 602,
+        "title": "Financial Analyst",
+        "description": "Analyze financial data and create reports for business decisions.",
+        "skills": ["Finance", "Data Analysis", "Excel", "Financial Modeling"]
+        },
+        {
+        "id": 603,
+        "title": "Tax Consultant",
+        "description": "Provide tax planning and consulting services for businesses and individuals.",
+        "skills": ["Tax Law", "Accounting", "Consulting", "Finance"]
+        }
+    ]
+    },
+    {
+    "id": 7,
+    "name": "Customer Support",
+    "jobs": [
+        {
+        "id": 701,
+        "title": "Customer Support Representative",
+        "description": "Assist customers with inquiries and provide solutions.",
+        "skills": ["Communication", "CRM", "Problem-Solving", "Support"]
+        },
+        {
+        "id": 702,
+        "title": "Technical Support Specialist",
+        "description": "Provide technical support and troubleshoot software issues.",
+        "skills": ["Technical Support", "Networking", "Help Desk", "IT"]
+        },
+        {
+        "id": 703,
+        "title": "Virtual Assistant",
+        "description": "Handle administrative tasks and support business operations.",
+        "skills": ["Organization", "Data Entry", "Communication", "Microsoft Office"]
+        }
+    ]
+    }
+]
+}

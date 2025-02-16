@@ -1,13 +1,26 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Auth } from "../context/context";
 import Logo from "../components/logo";
 import '../style/style_pages/work.css'
 import { Link } from "react-router-dom";
+import Category from '../JSON/jobs.json'
 
 export default function Work() {
     const { session } = useContext(Auth);
     const [visibleNav,setVisibleNav] = useState(false);
-    console.log(session);
+    const [skills,setSkills] = useState([]);
+    const [category,setCategory] = useState("Web Development")
+
+    useEffect(() => {
+        let allSkills = []
+        Category.categories.filter((e) =>
+        e.name === category)
+        .map((e) =>
+        e.jobs.map((e) =>
+        e.skills.map((e) => allSkills.push(e))
+        ))
+        setSkills(allSkills);
+    }, [category])
     return (
         <div className="work">
             <header>
@@ -39,8 +52,31 @@ export default function Work() {
                 </ul>
                 }
             </header>
-            <div className="works">
-                <h1>this is steam page</h1>
+            <div className="control">
+                <div className="filter">
+                    <select onChange={(e) => setCategory(e.target.value)}>
+                        {Category.categories.map((e) => 
+                        <option value={e.name}>{e.name}</option>
+                        )}
+                    </select>
+                    <select>
+                        {skills.map((e) =>
+                        <option>{e}</option>
+                        )}
+                    </select>
+                    <div className="collect-skills">
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="table-control">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>job title</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     )
