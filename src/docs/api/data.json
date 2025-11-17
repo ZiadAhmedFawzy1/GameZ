@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "name":"call of duty (warzone)",
+        "desc": "Warzone — a high-octane battle royale where fast reflexes, smart positioning, and ruthless decision-making decide who survives.",
+        "rate": "4.0",
+        "downloads":"33",
+        "img":"warzone.jpg",
+        "price": 30,
+        "discount": 0
+    },
+    {
+        "id":2,
+        "name":"god of war (ragnarok)",
+        "desc": "an epic journey of gods and monsters where Kratos and Atreus face destiny, survival, and the end of worlds.",
+        "rate": "4.0",
+        "downloads":"2302",
+        "img":"godofwar.png",
+        "price": 50,
+        "discount": 20
+    },
+    {
+        "id":3,
+        "name":"valorant",
+        "desc": "VALO is a fast-paced tactical shooter where aim",
+        "rate": "4.0",
+        "downloads":"1320",
+        "img":"valo.png",
+        "price": 150,
+        "discount": 30
+    },
+    {
+        "id":4,
+        "name":"R.E.P.O",
+        "desc": "a high-tech mission where strategy, precision, and teamwork decide victory in every operation.",
+        "rate": "4.0",
+        "downloads":"1050",
+        "img":"repo.jpg",
+        "price": 250,
+        "discount": 249
+    }
+]

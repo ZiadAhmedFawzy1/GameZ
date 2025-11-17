@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Gravitas+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+button {
+    all: unset;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    cursor: default;
+}

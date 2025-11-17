@@ -1,5 +1,7 @@
-export default function Logo(props) {
+import '../style/components/logo.css';
+
+export default function Logo (props) {
     return (
-        <h1 style={{fontSize: props.size}}>grow here <i className="fa-solid fa-seedling"></i></h1>
+        <h1 style={{fontSize: props.size || '30px'}}>game<span>Z</span></h1>
     )
 }

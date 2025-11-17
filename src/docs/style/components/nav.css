@@ -1,0 +1,28 @@
+button {
+    cursor: pointer;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+ul li a {
+    color: aliceblue;
+    position: relative;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition-duration: 0.5s;
+}
+
+ul li a:hover::before {
+    width: 100%;
+} 

@@ -1,0 +1,65 @@
+.welcome {
+    height: 500px;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url("../../imgs/bg/callofduty.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.welcome .content {
+    position: absolute;
+    color: #fff;
+    top: 30%;
+    left: 30px;
+    width: 50%;
+}
+
+.welcome .content h2 {
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.welcome .price-content {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin: 10px 0;
+}
+
+.welcome .price-content button {
+    padding: 5px 20px;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    transition-duration: 0.2s;
+}
+
+.welcome .price-content button:hover {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.section {
+    padding: 10px;
+    width: 85%;
+    margin: auto;
+}
+
+.section h3 {
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.slide-card {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

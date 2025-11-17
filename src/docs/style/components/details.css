@@ -1,0 +1,127 @@
+.containerDetails {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerDetails::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(18px);
+    z-index: -1;
+    animation: blurSmoothly 0.2s linear;
+}
+
+@keyframes blurSmoothly {
+    0% {
+        backdrop-filter: blur(0);
+    }
+    100% {
+        backdrop-filter: blur(18px);
+    }
+}
+
+.containerDetails .detailsBox {
+    width: 60%;
+    position: relative;
+    direction: rtl;
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.438);
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 50px;
+    transform: scale(1);
+}
+
+.containerDetails .detailsBox .image {
+    width: 30%;
+    height: 300px;
+    background-image: url("../../imgs/bg/callofduty.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+.containerDetails .detailsBox .description {
+    width: 60%;
+}
+
+.containerDetails .detailsBox .description h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.containerDetails span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.containerDetails .detailsBox .btnCart {
+    width: 60%;
+    background-color: red;
+    text-align: center;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+}
+
+.containerDetails .detailsBox .btnCart:hover {
+    background-color: rgb(173, 1, 1);
+}
+
+.containerDetails a {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    width: fit-content;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid transparent;
+    transition-duration: 0.5s;
+}
+
+.containerDetails a img {
+    vertical-align: middle;
+}
+
+.containerDetails a:hover {
+    background-color: transparent;
+    border: 1px solid #f00;
+}
+
+.containerDetails .show {
+    display: flex;
+    animation: scallingIn 0.5s linear;
+}
+
+@keyframes scallingIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.containerDetails .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}

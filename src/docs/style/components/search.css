@@ -1,0 +1,25 @@
+.searchInp {
+    width: 200px;
+}
+
+.searchInp input {
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    width: 150px;
+    transition-duration: 0.5s;
+}
+.searchInp input::placeholder {
+    color: #ffffff63;
+    transition-duration: 0.5s;
+}
+.searchInp input:focus::placeholder {
+    color: #fffffffd;
+}
+
+.searchInp input:focus {
+    width: 200px;
+    border-radius: 5px;
+}
