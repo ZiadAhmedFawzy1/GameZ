@@ -7,7 +7,8 @@
         "downloads":"33",
         "img":"warzone.jpg",
         "price": 30,
-        "discount": 0
+        "discount": 0,
+        "cover": "callofduty_cover.jpg"
     },
     {
         "id":2,
@@ -17,7 +18,8 @@
         "downloads":"2302",
         "img":"godofwar.png",
         "price": 50,
-        "discount": 20
+        "discount": 20,
+        "cover": "godofwar_cover.jpg"
     },
     {
         "id":3,
@@ -27,16 +29,29 @@
         "downloads":"1320",
         "img":"valo.png",
         "price": 150,
-        "discount": 30
+        "discount": 30,
+        "cover": "valo_cover.jpg"
     },
     {
         "id":4,
+        "name":"expedition 33",
+        "desc": "a high-tech mission where strategy, precision, and teamwork decide victory in every operation.",
+        "rate": "4.0",
+        "downloads":"1050",
+        "img":"expedition.png",
+        "price": 250,
+        "discount": 249,
+        "cover": "expectioncover.jpg"
+    },
+    {
+        "id":5,
         "name":"R.E.P.O",
         "desc": "a high-tech mission where strategy, precision, and teamwork decide victory in every operation.",
         "rate": "4.0",
         "downloads":"1050",
         "img":"repo.jpg",
         "price": 250,
-        "discount": 249
+        "discount": 249,
+        "cover": "repo_cover.jpg"
     }
 ]

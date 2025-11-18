@@ -1,0 +1,9 @@
+.store {
+    color: #fff;
+    width: 80%;
+    margin: auto;
+}
+
+.store h2 {
+    text-transform: uppercase;
+}

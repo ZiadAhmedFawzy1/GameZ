@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Gravitas+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+::selection {
+    background-color: transparent;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -26,3 +30,14 @@ input:focus {
 h1,h2,h3,h4,h5,h6,p {
     cursor: default;
 }
+
+::-webkit-scrollbar{
+    width: 15px;
+    }
+    ::-webkit-scrollbar-track{
+    background: #d1e5ff;
+    }
+    ::-webkit-scrollbar-thumb{
+    background: linear-gradient(#00ffb3, #a73a3a, #b3fc92);
+    border-radius: 50px;
+    }

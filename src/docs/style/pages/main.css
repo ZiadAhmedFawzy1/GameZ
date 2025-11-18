@@ -63,3 +63,47 @@
     height: 100px;
     background-color: red;
 }
+
+.NGs-container {
+    display: flex;
+    margin: 40px 0;
+}
+
+.NGs-container .display {
+    width: 80%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00000050;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.NGs-container ul {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    width: 20%;
+}
+
+.NGs-container ul li {
+    display: block;
+    color: #fff;
+    padding: 20px 5px;
+    margin: 0;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.NGs-container ul li:hover {
+    background-color: rgba(255, 0, 0, 0.37);
+}
+
+.NGs-container ul {
+    background-color: #00000050;
+}
+
+.active {
+    background-color: rgba(255, 0, 0, 0.37);
+}
