@@ -1,5 +1,4 @@
 footer {
-    text-align: center;
     padding: 20px;
     text-transform: capitalize;
 }
@@ -9,47 +8,99 @@ footer .head {
     color: #fff;
 }
 
-footer h1 {
-    display: inline-block;
-    width: 90px;
-    padding: 40px;
+footer .head h1 {
     border-radius: 20px;
     position: relative;
     overflow: hidden;
 }
 
-footer p {
+footer .head p {
     width: 40%;
     margin: auto;
     padding: 20px;
 }
 
-footer h1::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(27, 27, 27, 0.822);
-    backdrop-filter: blur(50px);
-    z-index: -1;
-}
-
-footer h2 {
+footer .head h2 {
     color: #C0C0C0;
     font-size: 50px;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-footer button {
+footer .head .downloadBtn {
     padding: 10px;
     background-color: rgba(255, 0, 0, 0.74);
     border-radius: 10px;
 }
 
-footer button img {
+footer .head .downloadBtn img {
     vertical-align: middle;
     margin: 0 5px;
+}
+
+footer .lists {
+    color: red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.footwear {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #C0C0C0;
+    padding: 10px;
+}
+
+.footwear .word {
+    padding: 10px;
+}
+
+.footwear .word p {
+    width: 80%;
+}
+
+.footwear .word p a {
+    color: #fff;
+}
+
+.footwear .word .social a {
+    display: inline-block;
+    padding: 10px;
+    color: #C0C0C0;
+}
+
+.footwear .message {
+    width: 30%;
+}
+
+.footwear .message input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 20px;
+    position: relative;
+    color: #fff;
+    transition-duration: 0.5s;
+}
+
+.footwear .message input:focus {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #000;
+}
+
+.footwear .message button {
+    padding: 8px 30px;
+    margin: 5px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0.616);
+}
+
+.footwear .activeJoin {
+    background-color: rgb(1, 66, 1) !important;
 }

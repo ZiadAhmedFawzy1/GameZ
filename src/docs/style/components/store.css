@@ -7,3 +7,15 @@
 .store h2 {
     text-transform: uppercase;
 }
+
+.store .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.store .container .card {
+    margin: 10px;
+    height: 450px;
+}

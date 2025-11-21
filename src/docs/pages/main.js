@@ -13,29 +13,25 @@ import Details from "../components/details";
 import AboutUs from "../components/about_us";
 import Store from "../components/store";
 export default function Main() {
-    const {clips} = useContext(Auth);
+    const {clips, data, loading} = useContext(Auth);
     const [idImg,setIdImg] = useState(1)
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIdImg(lastValue => lastValue === Data.length ? 1 : lastValue + 1);
-        }, 10000);
-
-        return () => clearInterval(interval);
-    }, [idImg])
-
+        setIdImg(data[0]?.id)
+    }, [loading])
     return (
         <div>
             {clips.status && 
-                Data.filter(e => e.id === clips.id).map((e,i) => 
+                data.filter(e => e.id === clips.id).map((e,i) => 
                     <Details
                     key={i}
-                    name={e.name} 
-                    desc={e.desc} 
-                    img={require(`../imgs/bg/${e.img}`)} 
-                    rate={e.rate} 
-                    price={e.price}
+                    name={e.title} 
+                    desc={e.description} 
+                    img={e.image} 
+                    rate={5.0} 
+                    price={e.worth.replace("$", " EGP ")}
                     discount={e.discount}
-                    download={e.downloads}
+                    download={e.users}
+                    url={e.open_giveaway_url}
                     />
                 )
             }
@@ -60,9 +56,9 @@ export default function Main() {
                 slidesPerView={3}
                 className="mySwiper"
             >
-                {Data.map((e,i) => 
+                {data.map((e,i) => 
                     <SwiperSlide key={i}>
-                        <Card id={e.id}  img={require(`../imgs/bg/${e.img}`)} title={e.name} desc={e.desc} download={e.downloads}/>
+                        <Card id={e.id}  img={e.image} title={e.title} desc={e.description} download={e.user}/>
                     </SwiperSlide>
                     )}
                     </Swiper>
@@ -75,12 +71,12 @@ export default function Main() {
                     <div
                         className="display"
                         style={{
-                            backgroundImage: `url(${require(`../imgs/bg/${Data.find(e => e.id === idImg)?.cover}`)})`
+                            backgroundImage: `url(${data.find(e => e.id === idImg)?.image || ''})`
                         }}
                         ></div>
                     <ul>
-                        {Data.map((e,i) => 
-                        <li className={e.id === idImg ? "active" : ""} onClick={() => setIdImg(e.id)} key={i}>{e.name}</li>
+                        {data.map((e,i) => 
+                        <li className={e.id === idImg ? "active" : ""} onClick={() => setIdImg(e.id)} key={i}>{e.title}</li>
                         )}
                     </ul>
                 </div>

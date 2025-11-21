@@ -8,3 +8,26 @@ header {
     z-index: 1;
 }
 
+
+.static-header {
+    position: absolute;
+    top: 0px;
+} 
+
+.sticky-header {
+    z-index: 999;
+    position: fixed;
+    animation: topDown 0.5s linear;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+
+@keyframes topDown {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0px;
+    }
+}

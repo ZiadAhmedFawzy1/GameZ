@@ -1,6 +1,6 @@
 .card {
     width: 300px;
-    height: 400px;
+    height: 450px;
     background-color: transparent;
     border-radius: 40px;
     background-color: #49494948;
@@ -13,7 +13,7 @@
 .card .bg-gm {
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -26,11 +26,6 @@
     transition-timing-function: linear;
     transition-property: all;
     cursor: pointer;
-}
-
-.card .bg-gm:hover {
-    background-size: 80%;
-    background-position-y: -40px;
 }
 
 .card h4 {

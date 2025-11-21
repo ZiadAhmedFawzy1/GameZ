@@ -33,10 +33,10 @@ export default function Details (props) {
                     <p>{props.desc}</p>
                     <span><i className="fa-solid fa-star"></i> {props.rate}</span>
                     <span><i className="fa-solid fa-download"></i> {props.download}</span>
-                    <p>{props.price} EGP<span style={{textDecorationLine:"line-through"}}>{props.discount <= 0 || props.discount >= props.price ? "" : props.discount + props.price + "EGP"}</span></p>
+                    <p>{props.price}</p>
                     <CardBtn name={"btnCart"} />
                 </div>
-                <Link to={'/download'}><img src={require("../imgs/icons/next.png")} width='20' alt='next'/> more details</Link>
+                <a href={props.url}><img src={require("../imgs/icons/next.png")} width='20' alt='next'/> more details</a>
             </div>
         </div>
     )
