@@ -1,4 +1,3 @@
-import Header from "../components/header";
 import '../style/pages/main.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -40,7 +39,6 @@ export default function Main() {
                     />
                 )
             }
-            <Header/>
             <div className="welcome">
                 <div className="content">
                 <h2>hollow knight</h2>

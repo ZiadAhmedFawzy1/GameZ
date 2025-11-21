@@ -1,10 +1,10 @@
 .welcome {
-    height: 500px;
+    height: 800px;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.9)), url("../../imgs/bg/callofduty.jpg");
     background-size: cover;
     background-position: top;
     position: relative;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 .welcome .content {
