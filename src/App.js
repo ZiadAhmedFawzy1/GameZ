@@ -6,9 +6,10 @@ import Footer from "./docs/components/footer";
 import { useContext } from "react";
 import { Auth } from "./docs/context/context";
 import Logo from "./docs/components/logo";
+import NavList from "./docs/components/navList";
 
 export default function App () {
-    const { loading } = useContext(Auth);
+    const { loading, navBar, displayWidth } = useContext(Auth);
     return (
         <div className="app">
             {loading && 
@@ -26,6 +27,8 @@ export default function App () {
                 <div className="shape3"></div>
             </div>
             <Header/>
+            {/* navbar open if click on navbar and display less than 700 pixel  */}
+            {navBar && displayWidth < 700  && <NavList />}
             <Routes>
                 <Route path="/" element={<Main />} />
             </Routes>

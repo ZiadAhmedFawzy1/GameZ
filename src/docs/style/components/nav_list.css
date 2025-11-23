@@ -1,0 +1,67 @@
+.navList {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 300px;
+    background-color: #000;
+    animation: ToLeft 0.2s linear;
+}
+
+.navList ul li {
+    display: block;
+    margin: 20px;
+}
+
+.navList ul li a {
+    display: block;
+    width: 100%;
+}
+
+.navList .logo {
+    font-family: serif;
+    color: #f00;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 40px;
+}
+
+.navList h4 {
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    font-weight: 400;
+}
+
+.navList .social {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.navList .social a {
+    margin: 0 5px;
+    color: #fff;
+}
+
+@keyframes ToLeft {
+    0% { 
+        right: -300px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+.navList .footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.navList .footer a {
+    color: #c0c0c0;
+    font-size: 12px;
+}

@@ -3,6 +3,7 @@ import '../style/components/footer.css';
 import List from "./list";
 import { useContext, useEffect, useState } from "react";
 import { Auth } from "../context/context";
+import Social from "./social";
 
 export default function Footer () {
     const {API, setVerify, verify} = useContext(Auth);
@@ -93,12 +94,7 @@ export default function Footer () {
             <div className="footwear">
                 <div className="word">
                     <p>get all the latest news, gameZ gmaes and highest quality games from here. <a rel="noreferrer" href="https://github.com/ZiadAhmedFawzy1" target="_blank">ziad fawzy</a> say directly to your inbox</p>
-                    <div className="social">
-                        <a href="/"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="/"><i className="fa-brands fa-github"></i></a>
-                        <a href="/"><i className="fa-brands fa-x-twitter"></i></a>
-                        <a href="/"><i className="fa-brands fa-twitch"></i></a>
-                    </div>
+                    <Social />
                 </div>
                 <div className="message">
                     <h4>Get in Touch with the Developer</h4>

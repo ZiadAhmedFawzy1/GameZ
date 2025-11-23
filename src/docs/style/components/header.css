@@ -46,6 +46,39 @@ header {
     border-radius: 20px;
 }
 
-/* .nav .li-3 {
-    display ;
-} */
+.nav .rot-1 {
+    transform: rotate(40deg);
+    position: relative;
+    left: 0px;
+    bottom: -9px;
+    animation: rotate1 0.2s linear;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(40deg);
+    }
+}
+
+.nav .rot-3 {
+    transform: rotate(140deg);
+    position: relative;
+    top: 0px;
+    animation: rotate3 0.2s linear;
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(140deg);
+    }
+}
+
+.nav .hide {
+    display: none;
+}

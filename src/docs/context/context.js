@@ -15,7 +15,8 @@ export default function Context ({children}) {
         status: false,
         id: 0
     })
-
+    const [navBar,setNavBar] = useState(false);
+    const [displayWidth,setDisplayWidth] = useState(window.innerWidth)
     // the api that uses to connect with server 
     useEffect(() => {
         // start loading
@@ -51,7 +52,11 @@ export default function Context ({children}) {
         data,
         loading,
         verify, 
-        setVerify
+        setVerify,
+        navBar,
+        setNavBar,
+        displayWidth,
+        setDisplayWidth
     }
 
     return <Auth.Provider value={parent}>{children}</Auth.Provider>
