@@ -1,10 +1,80 @@
 import Logo from "./logo";
 import '../style/components/footer.css';
 import List from "./list";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Auth } from "../context/context";
 
 export default function Footer () {
-    const [mail,setMail] = useState("")
+    const {API, setVerify, verify} = useContext(Auth);
+    
+    const [mail,setMail] = useState({
+        sender: "",
+        message: "",
+        loading: false,
+    })
+    const [message, setMessage] = useState("");
+    const sendMaile = async () => {        
+          
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.sender);
+        if(!valid) {
+            setMessage("invalid Email : example@gmail.com");
+            return;
+        }
+        if(!mail.message) {
+            setMessage("the message is empty");
+        }
+        // change status because the customer writes all inputs right.
+        setMail((prev) => ({...prev, loading: true}));
+        // reset message
+        setMessage("");
+
+        await fetch(`${API}/sendCode`, {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify({
+                client: mail.sender
+
+            }),
+            credentials: "include",
+        }).then((res) => {
+            if(!res.ok) {
+                throw new Error("the message doesn't send");
+            }
+            else {
+                setMail((prev) => ({...prev, loading: false}));
+                setVerify((prev) => ({...prev, verifyBox: true}))
+            }
+            
+        })
+
+    }
+    useEffect(() => {
+        if(!verify.isverified) { 
+            return;
+        }
+        const response = async () => {
+            await fetch(`${API}/sendMessage`, {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify({
+            mail: {
+                sender: mail.sender,
+                message: mail.message
+            }})
+        }).then((res) => {
+            if(res.ok) {
+                setTimeout(() => {
+                    window.location.reload();
+                }, 3000);
+            }
+        })
+        } 
+        response()
+    }, [verify.isverified])
     return (
         <footer>
             <div className="head">
@@ -31,8 +101,24 @@ export default function Footer () {
                     </div>
                 </div>
                 <div className="message">
-                    <input onChange={(e) => setMail(e.target.value)} value={mail} type="text" placeholder="example@gmail.com" />
-                    <button className={mail.includes("gmail.com") && "activeJoin"}>join</button>
+                    <h4>Get in Touch with the Developer</h4>
+                    <div className="mail">
+                        <input onChange={(e) => setMail((prev) => 
+                            ({
+                                ...prev,
+                                sender: e.target.value
+                            })
+                        )} value={mail.sender} type="text" placeholder="example@gmail.com" />
+                        
+                        <textarea placeholder="text here..." onChange={(e) => setMail((prev) => 
+                            ({
+                                ...prev,
+                                message: e.target.value
+                            })
+                        )} value={mail.message}></textarea>
+                    </div>
+                        <button disabled={mail.loading || !mail.sender || !mail.message} onClick={() => sendMaile()} className={mail.sender.includes("gmail.com") ? "activeJoin" : ""}>{mail.loading ? "loading...": "join"}</button>
+                    <p style={{color: "red"}}>{message}</p>
                 </div>
             </div>
         </footer>

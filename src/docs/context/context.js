@@ -3,9 +3,14 @@ import { createContext, useEffect, useState } from "react";
 export const Auth = createContext();
 
 export default function Context ({children}) {
-    const [API, setAPI] = useState("");
+    const [API, setAPI] = useState("http://localhost:5000");
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(false)
+    const [verify, setVerify] = useState({
+        verifyBox: false,
+        isverified: false,
+        code: ""
+    })
     const [clips,setClips] = useState({
         status: false,
         id: 0
@@ -13,15 +18,12 @@ export default function Context ({children}) {
 
     // the api that uses to connect with server 
     useEffect(() => {
-        // to ignore warning
-        setAPI("")
-
         // start loading
         setLoading(true)
         const getData =  async () => {
         
         try {
-                const res = await fetch ("http://localhost:5000/data", {
+                const res = await fetch (`${API}/data`, {
                     credentials: "include",
                     headers: {
                         "Content-Type":"application/json"
@@ -47,7 +49,9 @@ export default function Context ({children}) {
         setClips,
         clips,
         data,
-        loading
+        loading,
+        verify, 
+        setVerify
     }
 
     return <Auth.Provider value={parent}>{children}</Auth.Provider>

@@ -1,6 +1,6 @@
 .store {
     color: #fff;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -9,10 +9,9 @@
 }
 
 .store .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
-    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .store .container .card {

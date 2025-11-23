@@ -46,6 +46,7 @@ footer .lists {
 }
 
 .footwear {
+    min-height: 300px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -74,14 +75,15 @@ footer .lists {
 
 .footwear .message {
     width: 30%;
+    position: relative;
 }
 
 .footwear .message input {
-    padding: 10px;
-    width: 60%;
+    padding: 10px 5px;
+    width: 90%;
     border: 1px solid #fff;
     background-color: transparent;
-    border-radius: 20px;
+    border-radius: 5px;
     position: relative;
     color: #fff;
     transition-duration: 0.5s;
@@ -99,6 +101,25 @@ footer .lists {
     margin: 5px 10px;
     border-radius: 20px;
     background-color: rgba(255, 0, 0, 0.616);
+    position: absolute;
+    right: 30px;
+}
+
+
+.footwear .message textarea {
+    max-width: 90%;
+    min-width: 90%;
+    max-height: 100px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #fff;
+    background-color: transparent;
+}
+
+
+.footwear .message textarea::placeholder {
+    color: #C0C0C0;
 }
 
 .footwear .activeJoin {

@@ -12,14 +12,18 @@ import { Auth } from "../context/context";
 import Details from "../components/details";
 import AboutUs from "../components/about_us";
 import Store from "../components/store";
+import VerifyBox from '../components/VerifyBox';
 export default function Main() {
-    const {clips, data, loading} = useContext(Auth);
-    const [idImg,setIdImg] = useState(1)
+    const {clips, data, loading, verify} = useContext(Auth);
+    const [idImg,setIdImg] = useState(1);
     useEffect(() => {
-        setIdImg(data[0]?.id)
-    }, [loading])
+        setIdImg(data[0]?.id);
+    }, [loading]);
     return (
         <div>
+            {verify.verifyBox &&
+                <VerifyBox />
+            }
             {clips.status && 
                 data.filter(e => e.id === clips.id).map((e,i) => 
                     <Details

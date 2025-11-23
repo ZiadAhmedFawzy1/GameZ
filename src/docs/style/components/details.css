@@ -125,3 +125,43 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+.input-verify input {
+    display: block
+    ;
+}
+
+.boxVerify {
+    text-align: center;
+    width: 50% !important;
+}
+
+.boxVerify .description {
+    width: 100% !important;
+}
+
+.boxVerify .inp-verify input {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-family: monospace;
+    letter-spacing: 7px;
+}
+
+.boxVerify .inp-verify input::placeholder {
+    color: #ccc;
+}
+
+.verifiedMail {
+    width: 100%;
+    direction: ltr;
+}
+
+.verifiedMail img {
+    width: 120px;
+} 

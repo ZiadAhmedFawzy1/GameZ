@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import '../style/components/details.css'
 import CardBtn from './cardBtn'
 import { useContext, useEffect, useState } from 'react'
