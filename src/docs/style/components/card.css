@@ -78,3 +78,37 @@
 .card button:hover {
     color: #fff;
 }
+
+@media screen and (max-width: 1073px) {
+    .card {
+        width: 200px;
+        height: 230px;
+    }
+    .card .bg-gm  {
+        height: 100px;
+    }
+    .card h4 {
+        font-size: 12px;
+    }
+    .card p {
+        font-size: 8px;
+    }
+    .card button {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .card {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .card .bg-gm {
+        height: 100%;
+    }
+    .card h4,
+    .card button {
+        display: none;
+    }
+}
