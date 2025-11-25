@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const Auth = createContext();
 
 export default function Context ({children}) {
-    const [API, setAPI] = useState("http://localhost:5000");
+    const [API, setAPI] = useState("https://api-gamez.vercel.app");
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(false)
     const [verify, setVerify] = useState({
