@@ -35,3 +35,39 @@
 .about-us .box div img {
     width: 80px;
 }
+
+@media screen and (max-width: 950px) {
+    .about-us .box {
+        justify-content: space-between;
+    }
+    .about-us .box div {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .about-us .box div img {
+        width: 40px;
+    }
+    .about-us p {
+        font-size: 12px;
+    }
+    .about-us h3 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-us h2 {
+        font-size: 25px;
+        -webkit-text-stroke: 2px #be0000;
+
+    }
+    .about-us .box {
+        flex-flow: column wrap;
+    }
+    .about-us .box div {
+        width: 80%;
+        margin: auto;
+    }
+}

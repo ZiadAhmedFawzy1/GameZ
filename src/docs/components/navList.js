@@ -1,6 +1,7 @@
 import NavBar from "./navbar";
 import '../style/components/nav_list.css';
 import Social from "./social";
+import Search from "./search";
 
 export default function NavList () {
     return (
@@ -10,6 +11,7 @@ export default function NavList () {
             <h3 className="logo">Z</h3>
             <h4>GameZ is biggest platform of games</h4>
             <Social />
+            <Search />
             <NavBar />
             <div className="footer">
                 <a href="/">policy of gamez</a>

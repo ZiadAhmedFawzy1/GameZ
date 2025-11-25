@@ -65,3 +65,18 @@
     color: #c0c0c0;
     font-size: 12px;
 }
+
+.navList .searchInp {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.navList .searchInp input {
+    width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+    .navList {
+        width: 100%;
+    }
+}

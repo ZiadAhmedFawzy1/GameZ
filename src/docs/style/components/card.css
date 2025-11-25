@@ -112,3 +112,10 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 340px) {
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+}

@@ -6,7 +6,7 @@ import { Auth } from "../context/context";
 import Social from "./social";
 
 export default function Footer () {
-    const {API, setVerify, verify} = useContext(Auth);
+    const {API, setVerify, verify, displayWidth} = useContext(Auth);
     
     const [mail,setMail] = useState({
         sender: "",
@@ -82,7 +82,15 @@ export default function Footer () {
                 <Logo size="50px"/>
                 <h2>the best egyption platform of gaming</h2>
                 <p>Our target is to have 5,000 games available this year. We aim to create the best, highest-quality games, and we support developers in turning their dreams into reality.</p>
-                <button className="downloadBtn"><span>get free for windows</span> <img src={require("../imgs/icons/windows.png")} width='20' alt="windows"/></button>
+                {displayWidth > 600 ? 
+                <button className="downloadBtn">
+                    <span>get free for windows</span> <img src={require("../imgs/icons/windows.png")} width='20' alt="windows"/>
+                </button>
+                :
+                <button className="downloadBtn">
+                    <span>get free for Android</span> <img src={require("../imgs/icons/android.png")} width='20' alt="windows"/>
+                </button>
+            }
             </div>
             <div className="lists">
                 <List head="what is new?" list={["play live games","Do it Now","LIEV","master Good"]} />
@@ -113,7 +121,9 @@ export default function Footer () {
                             })
                         )} value={mail.message}></textarea>
                     </div>
+                    <div className="btn">
                         <button disabled={mail.loading || !mail.sender || !mail.message} onClick={() => sendMaile()} className={mail.sender.includes("gmail.com") ? "activeJoin" : ""}>{mail.loading ? "loading...": "join"}</button>
+                    </div>
                     <p style={{color: "red"}}>{message}</p>
                 </div>
             </div>
